@@ -80,9 +80,9 @@ class Hash(object):
         pos = bisect(self.ring, key)
 
         if pos == len(self.ring):
-            return self.ring[0]
+            return self.key_map[self.ring[0]]
         else:
-            return self.ring[pos]
+            return self.key_map[self.ring[pos]]
 
 
     def _simple_hash(self, node):

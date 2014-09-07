@@ -45,6 +45,12 @@ class TestConsistentHashing(TestCase):
 
         self.assertTrue(node not in nodes)
 
+
+    def test_get_node(self):
+        url = 'www.foo.bar.com'
+
+        self.assertTrue(self.ring.get_node(url) in self.serverList)
+
 if __name__ == '__main__':
     unittest.main()
     
